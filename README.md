@@ -1,24 +1,26 @@
 # cchw1
 homework 1
 
-For my interactive elements, I wanted to make the black circles shake with mousePressed, and have the green and yellow circles move randomly with keyPressed. For the mousePressed function first a created a int variable named “shakeAmount” and put it to 3. Then a created an if conditional: 
+For this project, I referenced a piece of art that I saw online. I wanted it to incorporate a lot of lines, along with a mixture of black, green, yellow, and noFill circles. 
+
+For my interactive elements, I wanted to make the black circles shake with mousePressed and have the green and yellow circles move randomly with keyPressed. For the mousePressed function, first, I created an int variable named “shakeAmount” and set it to 3. Then, I created an if conditional: 
 
 if (mousePressed && dist(mouseX, mouseY, 190, 180) < 1000) {
    float offsetX = random(-shakeAmount, shakeAmount);
    float offsetY = random(-shakeAmount, shakeAmount);
 
-This code states that if the mouse is pressed at least 1000 pixels near the point (190, 180). then it will generates random offsets in the x and y directions by 3 pixels. I set it to 1000 so that no matter where you click, the circles will shake Under neith this code, I put the positions of all the black circles, so that all of them witll have the same effect. I also put the intial black circle positions. 
+This code states that if the mouse is pressed at least 1000 pixels near the point (190, 180). Then it will generate random offsets in the x and y directions by 3 pixels. I set it to 1000 so that no matter where you click, the circles will shake. Underneath this code, I put the positions of all the black circles, so that all of them will have the same effect. I also put the initial black circle positions. 
 
-Next for my keyPressed interactions, I made it so that when the 1 key is pressed, the yellow circles will move, and then 2 is pressed, the green circles move. 
+Next for my keyPressed interactions, I made it so that when the 1 key is pressed, the yellow circles will move, and then 2 key is pressed, the green circles move. 
 
-First, I created and int variable named numCircles and put it to 3 . This way, I can apply funcuitns to all circles at once. I then created the following float functions for the circle positions: 
+First, I created an int variable named numCircles and set it to 3. This way, I can apply functions to all circles at once. I then created the following float functions for the circle positions: 
 
 float[ ] greenX = new float[numCircles];
 float[ ] greenY = new float[numCircles];
 float[ ] yellowX = new float[numCircles];
 float[ ]  yellowY = new float[numCircles];
 
-This code allows the greenX and greenY to store the X and Y positions of the all  green circles, same going for the yellowX and yellowY. Next, I created a for loop in order to randomly generate the initial positions of the green and yellow circles:
+This code allows the greenX and greenY to store the X and Y positions of all green circles, same going for the yellowX and yellowY. Next, I created a for loop in order to randomly generate the initial positions of the green and yellow circles:
 
  for (int i = 0; i < numCircles; i++) {
     greenX[i] = random(circleSize, width - circleSize);
@@ -43,7 +45,7 @@ void keyPressed() {
       greenX[i] = random(circleSize, width - circleSize);
       greenY[i] = random(circleSize, height - circleSize);
 
-This code states that if the 1 key is pressed, it will create a for loop thats repeats for each yellow circle. This way when 1 is pressed, each yellow circle will reposition. The same goes for if 2 is pressed, then the green circles will repositions. 
+This code states that if the 1 key is pressed, it will create a for loop thats repeats for each yellow circle. This way when 1 is pressed, each yellow circle will reposition. The same goes for if 2 is pressed, then the green circles will reposition. 
 
 Finally , for an operation that imposes order, i created a noFill circle that snaps to an inviable grid whenever the mouse is moved. To this, i first created an int variable titled gridSize and made it 50, meaning that each square on the grid will be 50 pixels wide and tall. I then created this code to make the grid itself:
 
@@ -65,3 +67,5 @@ This code rounds the position of the mouse to the closest square on the grid, an
  noFill();
   stroke(0);
   ellipse(snappedX, snappedY, gridSize * 4, gridSize * 4);
+
+
