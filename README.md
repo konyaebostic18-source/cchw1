@@ -1,5 +1,6 @@
 # cchw1
 homework 1
+
 For my interactive elements, I wanted to make the black circles shake with mousePressed, and have the green and yellow circles move randomly with keyPressed. For the mousePressed function first a created a int variable named “shakeAmount” and put it to 3. Then a created an if conditional: 
 
 if (mousePressed && dist(mouseX, mouseY, 190, 180) < 1000) {
