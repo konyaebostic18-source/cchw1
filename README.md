@@ -1,6 +1,8 @@
 # cchw1
 homework 1
 
+![40cb6273f73eefe3ea3b62f7e9ab1808](https://github.com/user-attachments/assets/18b27bb0-7dda-44d6-94d8-e586af6c8d2e)
+
 For this project, I referenced a piece of art that I saw online. I wanted it to incorporate a lot of lines, along with a mixture of black, green, yellow, and noFill circles. 
 
 For my interactive elements, I wanted to make the black circles shake with mousePressed and have the green and yellow circles move randomly with keyPressed. For the mousePressed function, first, I created an int variable named “shakeAmount” and set it to 3. Then, I created an if conditional: 
